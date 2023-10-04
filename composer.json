@@ -1,6 +1,7 @@
 {
   "name": "hexide-digital/esv-core-connection",
   "description": "Inside package for Core of the project",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Hexide\\EsvCore\\": "src"
