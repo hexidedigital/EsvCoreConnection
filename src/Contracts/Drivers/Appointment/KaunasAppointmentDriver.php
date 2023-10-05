@@ -3,7 +3,7 @@
 namespace Hexide\EsvCore\Contracts\Drivers\Appointment;
 
 
-use src\Contracts\Drivers\ReadOnlyDriver;
+use  Hexide\EsvCore\Contracts\Drivers\ReadOnlyDriver;
 
 interface KaunasAppointmentDriver extends ReadOnlyDriver
 {

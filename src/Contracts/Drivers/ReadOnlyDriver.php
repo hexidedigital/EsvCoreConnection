@@ -2,7 +2,7 @@
 
 namespace Hexide\EsvCore\Contracts\Drivers;
 
-use src\Classes\Response;
+use Hexide\EsvCore\Classes\Response;
 
 interface ReadOnlyDriver
 {

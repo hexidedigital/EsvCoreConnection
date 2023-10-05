@@ -2,7 +2,7 @@
 
 namespace Hexide\EsvCore\Contracts\Drivers\Room;
 
-use src\Contracts\Drivers\ReadOnlyDriver;
+use  Hexide\EsvCore\Contracts\Drivers\ReadOnlyDriver;
 
 interface KaunasRoomDriver extends ReadOnlyDriver
 {
