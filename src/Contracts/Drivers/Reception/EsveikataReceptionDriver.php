@@ -2,9 +2,9 @@
 
 namespace Hexide\EsvCore\Contracts\Drivers\Reception;
 
-use  Hexide\EsvCore\Contracts\Drivers\WriteOnlyDriver;
+use Hexide\EsvCore\Contracts\Drivers\Driver;
 
-interface EsveikataReceptionDriver extends WriteOnlyDriver
+interface EsveikataReceptionDriver extends Driver
 {
 
 }

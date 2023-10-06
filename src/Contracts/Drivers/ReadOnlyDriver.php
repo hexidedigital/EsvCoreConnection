@@ -6,5 +6,5 @@ use Hexide\EsvCore\Classes\Response;
 
 interface ReadOnlyDriver
 {
-    public function get(string|null $date = null): Response;
+    public function get(array $params = []): Response;
 }
