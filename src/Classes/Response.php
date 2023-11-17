@@ -38,7 +38,7 @@ class Response
         return new static($data, $code ?? self::BAD_GATEWAY);
     }
 
-    public function errorNotFound(array $data = []): static
+    public static function errorNotFound(array $data = []): static
     {
         return new static($data, self::ERROR_NOT_FOUND);
     }

@@ -10,4 +10,6 @@ interface KaunasRoomDriver extends ReadOnlyDriver
     public function getRoomsByReception($reception_cid): Response;
 
     public function getReceptionByRoom($room_cid): Response;
+
+    public function findById($id): Response;
 }
