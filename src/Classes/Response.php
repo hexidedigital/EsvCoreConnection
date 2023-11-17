@@ -7,8 +7,9 @@ class Response
 {
     const SUCCESS = 200;
     const SUCCESS_NO_RESPONSE = 204;
-    const BAD_GATEWAY = 502;
+    const ERROR_NOT_FOUND = 404;
     const INTERNAL_ERROR = 500;
+    const BAD_GATEWAY = 502;
 
     public ?array $response = null;
 
@@ -37,6 +38,11 @@ class Response
         return new static($data, $code ?? self::BAD_GATEWAY);
     }
 
+    public function errorNotFound(array $data = []): static
+    {
+        return new static($data, self::ERROR_NOT_FOUND);
+    }
+
     public function isSuccessful(): bool
     {
         return in_array(
@@ -63,8 +69,9 @@ class Response
         return in_array(
             $this->status,
             [
+                self::ERROR_NOT_FOUND,
+                self::INTERNAL_ERROR,
                 self::BAD_GATEWAY,
-                self::INTERNAL_ERROR
             ]
         );
     }
