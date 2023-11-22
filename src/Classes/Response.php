@@ -8,6 +8,7 @@ class Response
     const SUCCESS = 200;
     const SUCCESS_NO_RESPONSE = 204;
     const ERROR_NOT_FOUND = 404;
+    const ERROR_RELATION_NEEDED = 422;
     const INTERNAL_ERROR = 500;
     const BAD_GATEWAY = 502;
 
@@ -52,6 +53,10 @@ class Response
                 self::SUCCESS_NO_RESPONSE,
             ]
         );
+    }
+    public function isRelationNeeded(): bool
+    {
+	    return in_array($this->status, [self::ERROR_RELATION_NEEDED]);
     }
 
     public function isEmpty(): bool
