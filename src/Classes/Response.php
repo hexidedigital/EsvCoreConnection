@@ -24,12 +24,12 @@ class Response
         $this->status = $status;
     }
 
-    public static function success(array $data): static
+    public static function success(array $data = []): static
     {
         return new static($data, self::SUCCESS);
     }
 
-    public static function successNoResponse(array $data): static
+    public static function successNoResponse(array $data = []): static
     {
         return new static($data, self::SUCCESS_NO_RESPONSE);
     }
@@ -42,6 +42,11 @@ class Response
     public static function errorNotFound(array $data = []): static
     {
         return new static($data, self::ERROR_NOT_FOUND);
+    }
+
+    public static function errorRelationNeeded(array $data = []): static
+    {
+        return new static($data, self::ERROR_RELATION_NEEDED);
     }
 
     public function isSuccessful(): bool
