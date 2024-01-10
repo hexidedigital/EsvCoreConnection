@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexide\EsvCore\Contracts\Drivers\Slot;
+namespace Hexide\EsvCore\Contracts\Drivers\Appointment;
 
 use Hexide\EsvCore\Contracts\Drivers\Driver;
 
